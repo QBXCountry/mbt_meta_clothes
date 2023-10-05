@@ -3,7 +3,7 @@ MBT.Debug = false
 
 MBT.Language = "EN"
 
-MBT.Framework = "OX" -- OX/ESX/QB
+MBT.Framework = "QB" -- OX/ESX/QB
 
 MBT.MenuKey = "J"
 
@@ -137,6 +137,7 @@ MBT.Props = {
 
 
 MBT.NotifyHandler = function(text, type)
+    exports.qbx_core:Notify(text, type)
     --[[
         text = "Lorem Ipsum"
         type = "error" / "info" / "warning"
