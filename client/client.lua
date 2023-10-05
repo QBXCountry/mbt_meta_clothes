@@ -146,6 +146,7 @@ function saveOutfitCache()
     elseif illenium_appearance and MBT.Framework == 'ESX' then
         saveSkinIllenium()
     elseif qb_clothing and MBT.Framework == 'QB' then
+		saveSkinIllenium()
         -- IMPLEMENT HERE LOGIC FOR SAVE CLOTHING FOR QBCore
     end
 end
@@ -411,4 +412,3 @@ if MBT.Debug then
     end, false)
    
 end
-
