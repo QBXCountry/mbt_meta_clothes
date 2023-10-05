@@ -21,7 +21,7 @@ end
 
 RegisterNetEvent('mbt_metaclothes:giveDress', function(data)
     local _source = source
-    local xPlayer = (MBT.Framework == "OX" and Ox.GetPlayer(_source)) or (MBT.Framework == "ESX" and ESX.GetPlayerFromId(_source)) or (MBT.Framework == "QB" and QBCore.Functions.GetPlayer(_source))
+    local xPlayer = (MBT.Framework == "OX" and Ox.GetPlayer(_source)) or (MBT.Framework == "ESX" and ESX.GetPlayerFromId(_source)) or (MBT.Framework == "QB" and exports.qbx_core:GetPlayer(_source))
     if xPlayer then
         local playerIdentity = (MBT.Framework == "OX" and xPlayer.name) or (MBT.Framework == "ESX" and xPlayer.getName()) or (MBT.Framework == "QB" and xPlayer.PlayerData.name) 
         ox_inventory:AddItem(_source, data.Item, 1 , {description = currLang["clothes_desc"]:format(playerIdentity), index = data.Index, sex = data.Sex, drawable = data.Drawable, texture = data.Texture, palette = data.Palette})
@@ -30,7 +30,7 @@ end)
 
 RegisterNetEvent('mbt_metaclothes:giveDressKit', function(data)
     local _source = source
-    local xPlayer = (MBT.Framework == "OX" and Ox.GetPlayer(_source)) or (MBT.Framework == "ESX" and ESX.GetPlayerFromId(_source)) or (MBT.Framework == "QB" and QBCore.Functions.GetPlayer(_source))
+    local xPlayer = (MBT.Framework == "OX" and Ox.GetPlayer(_source)) or (MBT.Framework == "ESX" and ESX.GetPlayerFromId(_source)) or (MBT.Framework == "QB" and exports.qbx_core:GetPlayer(_source))
 
     if xPlayer then
         local playerIdentity = (MBT.Framework == "OX" and xPlayer.name) or (MBT.Framework == "ESX" and xPlayer.getName()) or (MBT.Framework == "QB" and xPlayer.PlayerData.name) 
@@ -53,7 +53,7 @@ end)
 RegisterNetEvent('mbt_metaclothes:giveProp', function(data)
     local _source = source
 
-    local xPlayer = (MBT.Framework == "OX" and Ox.GetPlayer(_source)) or (MBT.Framework == "ESX" and ESX.GetPlayerFromId(_source)) or (MBT.Framework == "QB" and QBCore.Functions.GetPlayer(_source))
+    local xPlayer = (MBT.Framework == "OX" and Ox.GetPlayer(_source)) or (MBT.Framework == "ESX" and ESX.GetPlayerFromId(_source)) or (MBT.Framework == "QB" and exports.qbx_core:GetPlayer(_source))
 
     if xPlayer then
         local playerIdentity = (MBT.Framework == "OX" and xPlayer.name) or (MBT.Framework == "ESX" and xPlayer.getName()) or (MBT.Framework == "QB" and xPlayer.PlayerData.name) 
