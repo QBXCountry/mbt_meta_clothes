@@ -102,7 +102,8 @@ end
 
 RegisterNetEvent('mbt_metaclothes:checkDress')
 AddEventHandler('mbt_metaclothes:checkDress', function(data)
-    data.pedSex = data.sex == "m" and "male" or "female"
+    --data.pedSex = data.sex == "m" and "male" or "female"
+    data.pedSex = data.sex == 0 and "male" or "female"
     local currentTopDress = {}
     local isDefault = true
 
@@ -143,10 +144,9 @@ function saveOutfitCache()
     elseif fivem_appearance and MBT.Framework == 'ESX' then
         appearance = exports['fivem-appearance']:getPedAppearance(cache.ped)
         TriggerServerEvent('mbt_metaclothes:saveSkin', appearance)
-    elseif illenium_appearance and MBT.Framework == 'ESX' then
+    elseif illenium_appearance and MBT.Framework == 'QB' then
         saveSkinIllenium()
     elseif qb_clothing and MBT.Framework == 'QB' then
-		saveSkinIllenium()
         -- IMPLEMENT HERE LOGIC FOR SAVE CLOTHING FOR QBCore
     end
 end
